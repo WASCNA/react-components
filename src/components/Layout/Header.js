@@ -7,13 +7,15 @@ const Header = () => {
   return (
     <Link to="/">
       <Wrapper>
-        <img src={logo} alt="wheelingna" className="site-logo" />
-        <div className="site-text-box">
-          <h1 className="site-name">
-            Wheeling Area <span className="site-name-of">of</span>
-          </h1>
-          <div className="underline"></div>
-          <h1 className="site-name-na"> Narcotics Anonymous </h1>
+        <div className="header-content">
+          <img src={logo} alt="wheelingna" className="site-logo" />
+          <div className="site-text-box">
+            <h1 className="site-name">
+              Wheeling Area <span className="site-name-of">of</span>
+            </h1>
+            <div className="underline"></div>
+            <h1 className="site-name-na"> Narcotics Anonymous </h1>
+          </div>
         </div>
       </Wrapper>
     </Link>
@@ -23,9 +25,13 @@ const Header = () => {
 export default Header;
 
 const Wrapper = styled.header`
-  display: flex;
-  padding: 1rem 0;
-  margin-left: 1rem;
+  box-shadow: 0px 2px 4px 0px rgb(0 0 0 / 70%);
+
+  .header-content {
+    display: flex;
+    padding: 1rem 0;
+    margin-left: 1rem;
+  }
 
   h1 {
     margin: 0.25em 0;
@@ -38,6 +44,7 @@ const Wrapper = styled.header`
   .site-text-box {
     display: flex;
     flex-direction: column;
+    margin-top: .5rem;
   }
 
   .site-name {
